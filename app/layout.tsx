@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
+import GradientBackground from "@/components/gradient-background"
 import "./globals.css"
 
 const geistSans = Geist({
@@ -30,7 +31,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth`}>
-      <body className="font-sans bg-background text-foreground">
+  <body className="font-sans text-foreground">
+        <GradientBackground />
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>

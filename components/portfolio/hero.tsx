@@ -15,25 +15,20 @@ type HeroContent = {
 
 export default function Hero({ content }: { content: HeroContent }) {
   return (
-    <section className="relative overflow-hidden font-sans" aria-labelledby="hero-title">
-      {/* subtle gradient + soft blobs, inspired by reference */}
-      <div
-        className="absolute inset-0 -z-10 bg-[radial-gradient(60%_40%_at_15%_30%,rgba(56,189,248,0.18),transparent),radial-gradient(50%_30%_at_80%_20%,rgba(16,185,129,0.14),transparent)]"
-        aria-hidden="true"
-      />
+  <section className="relative overflow-hidden font-sans" aria-labelledby="hero-title">
     <div className="container mx-auto max-w-5xl px-4 min-h-screen flex items-center justify-center">
   <div className="grid gap-8 md:grid-cols-[1.35fr_1fr] items-center">
           <div>
             {/* Removed AI Strategy • Product Leadership label */}
 
-            <h1 id="hero-title" className="mt-4 text-balance text-5xl md:text-7xl font-semibold font-sans">
+            <h1 id="hero-title" className="mt-4 text-balance text-5xl md:text-7xl font-semibold tracking-tight text-gray-900 font-sans">
               {content.name}
             </h1>
             <div className="mt-6">
-              <p className="text-base md:text-lg font-medium text-gray-900 mb-2">
+              <p className="text-lg md:text-xl font-normal text-gray-800 mb-2">
                 {content.tagline}
               </p>
-              <p className="text-sm md:text-base text-gray-700 dark:text-gray-200 leading-relaxed">
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
                 {content.intro}
               </p>
             </div>
@@ -41,7 +36,7 @@ export default function Hero({ content }: { content: HeroContent }) {
             <div className="mt-6 flex flex-row flex-wrap items-center justify-start gap-3 text-left">
               <a href="https://www.linkedin.com/in/gaurrishabh/" target="_blank" rel="noreferrer">
                 <Button className="flex items-center gap-2 px-5 py-2.5 rounded-lg font-medium bg-white border border-gray-300 text-gray-900 shadow-sm hover:bg-gray-50 transition-all cursor-pointer">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="currentColor"><path d="M27 4H5C4.447 4 4 4.447 4 5v22c0 0.553 0.447 1 1 1h22c0.553 0 1-0.447 1-1V5C28 4.447 27.553 4 27 4zM12 24H8v-9h4V24zM10 13.75c-1.104 0-2-0.896-2-2s0.896-2 2-2s2 0.896 2 2S11.104 13.75 10 13.75zM24 24h-4v-4.5c0-1.104-0.896-2-2-2s-2 0.896-2 2V24h-4v-9h4v1.25c0.553-0.447 1.447-1.25 2.5-1.25c2.209 0 3.5 1.791 3.5 4.25V24z"/></svg>
+                  <Image src="/li.png" alt="LinkedIn" width={20} height={20} className="rounded-sm" />
                   Connect on LinkedIn
                 </Button>
               </a>
@@ -56,9 +51,19 @@ export default function Hero({ content }: { content: HeroContent }) {
             </div>
           </div>
 
-          {/* Avatar card inspired by Elena’s right-aligned image */}
+          {/* Avatar with a subtle colorful halo */}
           <div className="flex md:justify-end md:pl-12">
             <div className="relative rounded-xl border p-1 bg-background/70">
+              {/* Soft radial halo behind the photo for more visible hue */}
+              <span
+                aria-hidden
+                className="absolute -inset-6 md:-inset-8 -z-10 rounded-[40px]"
+                style={{
+                  background:
+                    "radial-gradient(50% 40% at 60% 35%, rgba(56,189,248,0.25), transparent 60%), radial-gradient(45% 35% at 20% 75%, rgba(236,72,153,0.18), transparent 70%)",
+                  filter: 'blur(10px)'
+                }}
+              />
               <span className="absolute inset-0 rounded-[32px] z-[-1]" style={{boxShadow: '16px 16px 40px 0px #E9D8FD'}}></span>
               <Image
                 src="/rishabh.png"
