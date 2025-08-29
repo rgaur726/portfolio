@@ -6,10 +6,54 @@ import Projects from "@/components/portfolio/projects"
 import Education from "@/components/portfolio/education"
 // import Fun from "@/components/portfolio/fun"
 import Contact from "@/components/portfolio/contact"
+import { buildMetadata } from "@/components/SEO"
+
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://example.com"
+
+const PERSON_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Rishabh Gaur",
+  jobTitle: "AI Product Strategist / Senior Product Manager",
+  url: BASE_URL,
+  image: `${BASE_URL}/professional-headshot.png`,
+  worksFor: { "@type": "Organization", name: "GoGuardian" },
+  alumniOf: "BITS Pilani",
+  sameAs: [
+    "https://www.linkedin.com/in/your-profile",
+    "https://github.com/rgaur726",
+    "https://x.com/rishabhgaur_",
+  ],
+  knowsAbout: ["Large Language Models", "B2B SaaS", "EdTech", "Churn Prevention", "Product Strategy"],
+}
+
+const WEBSITE_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Rishabh Gaur",
+  url: BASE_URL,
+  potentialAction: {
+    "@type": "SearchAction",
+    target: `${BASE_URL}/?s={search_term_string}`,
+    "query-input": "required name=search_term_string",
+  },
+}
+
+export async function generateMetadata() {
+  return buildMetadata({
+    title: "Rishabh Gaur — AI Product Strategist | GoGuardian, ex-Microsoft",
+    description:
+      "Senior PM focused on LLM-powered workflows, time-to-value, and churn prevention. Built B2B SaaS across 4+ markets at GoGuardian, Microsoft, and Circles.",
+    url: `${BASE_URL}/`,
+  })
+}
 
 export default function Page() {
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(PERSON_JSONLD) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBSITE_JSONLD) }} />
+
       {/* Hero */}
       <Hero
         content={{
@@ -28,35 +72,31 @@ export default function Page() {
         }}
       />
 
-  <SectionDivider />
+      <SectionDivider />
 
       <Section id="about">
         <About />
       </Section>
 
-  <SectionDivider />
+      <SectionDivider />
 
-  <Section id="experience">
+      <Section id="experience">
         <Experience />
       </Section>
 
-  <SectionDivider />
+      <SectionDivider />
 
       <Section id="projects">
         <Projects />
       </Section>
 
-  <SectionDivider />
+      <SectionDivider />
 
       <Section id="education">
         <Education />
       </Section>
 
-  <SectionDivider />
-
-
-
-  <SectionDivider />
+      <SectionDivider />
 
       <Section id="contact">
         <Contact />

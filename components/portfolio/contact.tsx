@@ -21,7 +21,7 @@ export default function Contact() {
             </div>
             <a
               href="mailto:rishabhgaur1226@gmail.com"
-              className="text-black font-semibold text-base md:text-lg hover:underline mt-1 sm:mt-0"
+              className="text-black text-base md:text-lg hover:underline mt-1 sm:mt-0"
             >
               rishabhgaur1226@gmail.com
             </a>
@@ -37,7 +37,7 @@ export default function Contact() {
               href="https://cal.com/rishabhgaur/15min"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-black font-semibold text-base md:text-lg hover:underline mt-1 sm:mt-0"
+              className="text-black text-base md:text-lg hover:underline mt-1 sm:mt-0"
             >
               15-min intro
             </a>
@@ -52,8 +52,8 @@ export default function Contact() {
             rel="noreferrer"
             className="flex items-center gap-2 hover:underline text-black"
           >
-            <Image src="/li.png" alt="LinkedIn" width={22} height={22} className="inline-block" />
-            <span className="font-medium">LinkedIn</span>
+              <Image src="/li.png" alt="LinkedIn" width={22} height={22} className="inline-block" />
+            <span className="font-normal">LinkedIn</span>
           </a>
 
           <a

@@ -1,45 +1,55 @@
-import React from "react"
-import Head from "next/head"
+// Helper: build a Next.js Metadata object for App Router pages
+import type { Metadata } from "next"
 
-type SEOProps = {
+export function buildMetadata({
+  title,
+  description,
+  url,
+  image,
+}: {
   title?: string
   description?: string
-  canonical?: string
-  image?: string
   url?: string
-  children?: React.ReactNode
-}
-
-export default function SEO({ title, description, canonical, image, url, children }: SEOProps) {
-  const siteTitle = title ?? "Rishabh Gaur — AI Product Strategist | GoGuardian, ex-Microsoft"
-  const siteDescription = description ?? "Senior PM focused on LLM-powered workflows, time-to-value, and churn prevention. Built B2B SaaS across 4+ markets at GoGuardian, Microsoft, and Circles."
-  const siteUrl = url ?? (canonical ?? "https://example.com")
+  image?: string
+}): Metadata {
+  const baseTitle = title ?? "Rishabh Gaur — AI Product Strategist | GoGuardian, ex-Microsoft"
+  const baseDescription = description ?? "Senior PM focused on LLM-powered workflows, time-to-value, and churn prevention. Built B2B SaaS across 4+ markets at GoGuardian, Microsoft, and Circles."
+  const siteUrl = url ?? process.env.NEXT_PUBLIC_BASE_URL ?? "https://example.com"
   const siteImage = image ?? "/og/hero.jpg"
 
-  return (
-    <Head>
-      <title>{siteTitle}</title>
-      <meta name="description" content={siteDescription} />
-      <link rel="canonical" href={siteUrl} />
+  // Ensure metadataBase is a proper URL so Next can resolve relative images
+  let metadataBase: URL | undefined
+  try {
+    metadataBase = new URL(siteUrl)
+  } catch (e) {
+    metadataBase = undefined
+  }
 
-      {/* Core */}
-      <meta name="robots" content="index,follow,max-image-preview:large" />
-      <meta name="theme-color" content="#0f172a" />
-
-      {/* Open Graph */}
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content={siteTitle} />
-      <meta property="og:description" content={siteDescription} />
-      <meta property="og:image" content={siteImage} />
-      <meta property="og:url" content={siteUrl} />
-
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={siteTitle} />
-      <meta name="twitter:description" content={siteDescription} />
-      <meta name="twitter:image" content={siteImage} />
-
-      {children}
-    </Head>
-  )
+  return {
+    title: baseTitle,
+    description: baseDescription,
+    metadataBase,
+    openGraph: {
+      title: baseTitle,
+      description: baseDescription,
+      url: siteUrl,
+      siteName: "Rishabh Gaur",
+      images: [siteImage],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: baseTitle,
+      images: [siteImage],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      nocache: false,
+      "max-image-preview": "large",
+    } as any,
+    other: {
+      "theme-color": "#0f172a",
+    },
+  }
 }

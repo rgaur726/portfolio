@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
+  title: "Rishabh Gaur — Product & Design",
+  description: "Rishabh Gaur — product manager who builds delightful web experiences.",
   generator: "v0.app",
 }
 
@@ -31,7 +31,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth`}>
-  <body className="font-sans text-foreground">
+      <head>
+        <link rel="icon" href="/favicon.svg" />
+      </head>
+      <body className="font-sans text-foreground">
         <GradientBackground />
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
