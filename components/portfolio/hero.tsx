@@ -64,7 +64,7 @@ export default function Hero({ content }: { content: HeroContent }) {
               />
               <span className="absolute inset-0 rounded-[32px] z-[-1]" style={{boxShadow: '16px 16px 40px 0px #E9D8FD'}}></span>
               <Image
-                src="/rishabh.png"
+                src="/rishabh_gaur.png"
                 alt="Rishabh's photo"
                 width={768}
                 height={1080}
