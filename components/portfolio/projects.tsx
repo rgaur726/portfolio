@@ -28,7 +28,7 @@ export default function Projects() {
 
 			<div className="mt-6 grid gap-4 md:grid-cols-2">
 								{/* Card 1: Vibe Coding Adventures */}
-								<Card className="relative transition hover:shadow-md gap-2 bg-gradient-to-br from-indigo-50/60 via-white/80 to-pink-50/40">
+								<Card className="relative transition hover:shadow-md gap-2 pl-5 md:pl-6 bg-gradient-to-br from-indigo-50/60 via-white/80 to-pink-50/40">
 									<span className="absolute left-0 top-3 bottom-3 w-3 rounded-r-full bg-gradient-to-b from-violet-300 to-violet-200" aria-hidden />
 					<CardHeader className="pb-0">
 						<div className="flex items-center justify-center gap-2 text-center">
@@ -79,7 +79,7 @@ export default function Projects() {
 				</Card>
 
 								{/* Card 2: Weekend Warrior Mode */}
-								<Card className="relative transition hover:shadow-md gap-2 bg-gradient-to-br from-indigo-50/60 via-white/80 to-pink-50/40">
+								<Card className="relative transition hover:shadow-md gap-2 pl-5 md:pl-6 bg-gradient-to-br from-indigo-50/60 via-white/80 to-pink-50/40">
 									<span className="absolute left-0 top-3 bottom-3 w-3 rounded-r-full bg-gradient-to-b from-violet-300 to-violet-200" aria-hidden />
 					<CardHeader className="pb-0">
 								<div className="flex items-center justify-center gap-2 text-center">
@@ -155,7 +155,7 @@ export default function Projects() {
 				</Card>
 
 								{/* Card 3: Reading Escapes */}
-								<Card className="relative transition hover:shadow-md md:col-span-2 gap-2 bg-gradient-to-br from-indigo-50/60 via-white/80 to-pink-50/40">
+								<Card className="relative transition hover:shadow-md md:col-span-2 gap-2 pl-5 md:pl-6 bg-gradient-to-br from-indigo-50/60 via-white/80 to-pink-50/40">
 									<span className="absolute left-0 top-3 bottom-3 w-3 rounded-r-full bg-gradient-to-b from-violet-300 to-violet-200" aria-hidden />
 					<CardHeader className="pb-0">
 						<div className="flex items-center justify-center gap-2 text-center">
@@ -172,10 +172,12 @@ export default function Projects() {
 								</p>
 								<div>
 									<div className="font-medium text-foreground mb-1">What I binge</div>
-									<p className="mb-1">Mysteries: Larsson, Christie, Bosch, Reacher</p>
-									<p className="mb-1">Conspiracy rides: Cotton Malone, Gabriel Allon</p>
-									<p className="mb-1">Comfort epics: LOTR, Harry Potter, The Hobbit</p>
-									<p className="mb-1">Classics that still punch: Orwell, Dostoevsky, Tolstoy</p>
+									<ul className="mb-1 list-disc list-inside space-y-1 text-muted-foreground">
+										<li><span className="font-semibold">Mysteries:</span> Blomkovist, Poirot, Reacher</li>
+										<li><span className="font-semibold">Conspiracy rides:</span> Malone, Allon, Bosch</li>
+										<li><span className="font-semibold">Comfort epics:</span> LOTR, Harry Potter</li>
+										<li><span className="font-semibold">Classics that still punch:</span> Orwell, Dostoevsky, Tolstoy</li>
+									</ul>
 								</div>
 								<div>
 									<div className="font-medium text-foreground mb-1">Recent detours</div>
