@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Linkedin, Sparkles } from "lucide-react"
+import { ArrowRight, Linkedin, Sparkles, Mail } from "lucide-react"
 
 type HeroContent = {
   name: string
@@ -25,10 +25,10 @@ export default function Hero({ content }: { content: HeroContent }) {
               {content.name}
             </h1>
             <div className="mt-6">
-              <p className="text-lg md:text-xl font-normal text-gray-800 mb-2">
+              <p className="text-xl md:text-2xl font-normal text-gray-800 mb-2">
                 {content.tagline}
               </p>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+              <p className="text-sm md:text-base text-gray-700 leading-relaxed">
                 {content.intro}
               </p>
             </div>
@@ -40,12 +40,10 @@ export default function Hero({ content }: { content: HeroContent }) {
                   Connect on LinkedIn
                 </Button>
               </a>
-              <a href="/resume.pdf" target="_blank" rel="noopener">
-                <Button className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg font-medium bg-gray-900 text-white shadow-sm hover:bg-gray-800 transition-all cursor-pointer min-w-[220px]">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 16v-8m0 8l-3-3m3 3l3-3m-9 5.25V6.75A2.25 2.25 0 0 1 8.25 4.5h7.5A2.25 2.25 0 0 1 18 6.75v10.5A2.25 2.25 0 0 1 15.75 19.5h-7.5A2.25 2.25 0 0 1 6 17.25z" />
-                  </svg>
-                  Download Resume
+              <a href="mailto:rishabhgaur1226@gmail.com" target="_blank" rel="noopener">
+                <Button className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg font-medium bg-gray-900 text-white shadow-sm hover:bg-gray-800 transition-all cursor-pointer min-w-[140px]">
+                  <Mail className="w-5 h-5" />
+                  Contact
                 </Button>
               </a>
             </div>
