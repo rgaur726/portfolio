@@ -67,15 +67,7 @@ export default function Contact() {
             <span className="text-sm md:text-base font-normal text-gray-700">GitHub</span>
           </a>
 
-          <a
-            href="https://x.com/rishabhgaur_"
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center gap-2 hover:underline text-black"
-          >
-            <Twitter className="h-5 w-5 text-gray-800" />
-            <span className="text-sm md:text-base font-normal text-gray-700">X</span>
-          </a>
+          {/* Twitter/X removed per request */}
         </div>
       </section>
     </div>

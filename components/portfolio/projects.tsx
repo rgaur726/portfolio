@@ -54,7 +54,7 @@ export default function Projects() {
 							<span className="font-semibold">My Flow:</span> Figma for mockups → v0 for frontend → Supabase for data → Claude Code + Copilot for the glue.
 						</p>
 						<p>
-							Andrej Karpathy was right - modern development does feels like cheating.
+							Andrej Karpathy was right - modern development does feel like cheating.
 						</p>
 
 						<div className="pt-1 flex flex-nowrap items-center gap-2 overflow-x-auto">
