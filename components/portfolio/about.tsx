@@ -23,28 +23,36 @@ export default function About() {
         </div>
         <div className="md:col-span-2 flex flex-col items-stretch">
           <ul className="grid gap-2 md:gap-3 w-full">
-            <li className="rounded-lg border p-3 md:p-4 bg-white/90 shadow-[0_4px_32px_0_#E9D8FD] w-full">
-              <div className="flex items-center gap-4">
-                <span className="flex items-center justify-center text-center text-xl md:text-2xl font-semibold text-slate-900 leading-none tabular-nums min-w-[4.25rem] md:min-w-[4.75rem]">6+</span>
-                <span className="text-sm md:text-base text-gray-600">Years building 0-to-1 and scaling 10-to-100 products</span>
+            {/* Unified style: left-accent rounded strip for all four cards */}
+            <li className="relative rounded-lg p-3 md:p-4 bg-gradient-to-br from-indigo-50/60 via-white/80 to-pink-50/40 shadow-md w-full overflow-hidden">
+              <span className="absolute left-0 top-2 bottom-2 w-3 rounded-r-full bg-gradient-to-b from-violet-300 to-violet-200" aria-hidden />
+              <div className="flex items-center gap-4 pl-6">
+                <span className="flex items-center justify-center text-center text-xl md:text-2xl font-semibold text-gray-900 leading-none tabular-nums min-w-[4.25rem] md:min-w-[4.75rem]">6+</span>
+                <span className="text-sm md:text-base text-gray-700">Years building 0-to-1 and scaling 10-to-100 products</span>
               </div>
             </li>
-            <li className="rounded-lg border p-3 md:p-4 bg-white/90 shadow-[0_4px_32px_0_#E9D8FD] w-full">
-              <div className="flex items-center gap-4">
-                <span className="flex items-center justify-center text-center text-xl md:text-2xl font-semibold text-slate-900 leading-none tabular-nums min-w-[4.25rem] md:min-w-[4.75rem]">240%</span>
-                <span className="text-sm md:text-base text-gray-600">Highest growth rate achieved in market expansion</span>
+
+            <li className="relative rounded-lg p-3 md:p-4 bg-gradient-to-br from-indigo-50/60 via-white/80 to-pink-50/40 shadow-md w-full overflow-hidden">
+              <span className="absolute left-0 top-2 bottom-2 w-3 rounded-r-full bg-gradient-to-b from-violet-300 to-violet-200" aria-hidden />
+              <div className="flex items-center gap-4 pl-6">
+                <span className="flex items-center justify-center text-center text-xl md:text-2xl font-semibold text-gray-900 leading-none tabular-nums min-w-[4.25rem] md:min-w-[4.75rem]">240%</span>
+                <span className="text-sm md:text-base text-gray-700">Highest growth rate achieved in market expansion</span>
               </div>
             </li>
-            <li className="rounded-lg border p-3 md:p-4 bg-white/90 shadow-[0_4px_32px_0_#E9D8FD] w-full">
-              <div className="flex items-center gap-4">
-                <span className="flex items-center justify-center text-center text-xl md:text-2xl font-semibold text-slate-900 leading-none tabular-nums min-w-[4.25rem] md:min-w-[4.75rem]">4+</span>
-                <span className="text-sm md:text-base text-gray-600">International markets expanded into</span>
+
+            <li className="relative rounded-lg p-3 md:p-4 bg-gradient-to-br from-indigo-50/60 via-white/80 to-pink-50/40 shadow-md w-full overflow-hidden">
+              <span className="absolute left-0 top-2 bottom-2 w-3 rounded-r-full bg-gradient-to-b from-violet-300 to-violet-200" aria-hidden />
+              <div className="flex items-center gap-4 pl-6">
+                <span className="flex items-center justify-center text-center text-xl md:text-2xl font-semibold text-gray-900 leading-none tabular-nums min-w-[4.25rem] md:min-w-[4.75rem]">4+</span>
+                <span className="text-sm md:text-base text-gray-700">International markets expanded into</span>
               </div>
             </li>
-            <li className="rounded-lg border p-3 md:p-4 bg-white/90 shadow-[0_4px_32px_0_#E9D8FD] w-full">
-              <div className="flex items-center gap-4">
-                <span className="flex items-center justify-center text-center text-xl md:text-2xl font-semibold text-slate-900 leading-none tabular-nums min-w-[4.25rem] md:min-w-[4.75rem]">11×</span>
-                <span className="text-sm md:text-base text-gray-600">Microsoft Certified across Azure, M365, Dynamics 365</span>
+
+            <li className="relative rounded-lg p-3 md:p-4 bg-gradient-to-br from-indigo-50/60 via-white/80 to-pink-50/40 shadow-md w-full overflow-hidden">
+              <span className="absolute left-0 top-2 bottom-2 w-3 rounded-r-full bg-gradient-to-b from-violet-300 to-violet-200" aria-hidden />
+              <div className="flex items-center gap-4 pl-6">
+                <span className="flex items-center justify-center text-center text-xl md:text-2xl font-semibold text-gray-900 leading-none tabular-nums min-w-[4.25rem] md:min-w-[4.75rem]">11×</span>
+                <span className="text-sm md:text-base text-gray-700">Microsoft Certified across Azure, M365, Dynamics 365</span>
               </div>
             </li>
           </ul>

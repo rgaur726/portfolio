@@ -76,18 +76,14 @@ export default function Experience() {
                 className={`relative overflow-hidden border rounded-xl p-0 transition-all duration-300 ease-out cursor-pointer [will-change:transform] ${
                   selectedIdx === idx
                     ? "bg-violet-50 border-violet-200 ring-1 ring-violet-300 shadow-[0_8px_48px_0_#E9D8FD] scale-[1.02] md:grow md:overflow-auto"
-                    : "bg-white border-gray-200 shadow-[0_4px_20px_0_#F1EAFE] hover:shadow-[0_6px_28px_0_#E9D8FD] hover:scale-[1.01] hover:bg-gray-50"
+                    : "bg-gradient-to-br from-indigo-50/60 via-white/80 to-pink-50/40 border-gray-200 shadow-[0_4px_20px_0_#F1EAFE] hover:shadow-[0_6px_28px_0_#E9D8FD] hover:scale-[1.01]"
                 }`}
               >
-              {selectedIdx === idx && (
-                <span
-                  aria-hidden="true"
-                  className="absolute inset-y-0 left-0 w-1 bg-violet-300"
-                />
-              )}
+              {/* left-accent strip for all cards (visible for both selected and unselected) */}
+              <span aria-hidden="true" className="absolute left-0 top-3 bottom-3 w-3 rounded-r-full bg-gradient-to-b from-violet-300 to-violet-200" />
               <div
                 className={`flex flex-row items-center gap-3 ${
-                  selectedIdx === idx ? "px-5 py-4" : "px-4 py-3"
+                  selectedIdx === idx ? "pl-7 pr-5 py-4" : "pl-7 pr-4 py-3"
                 } transition-[padding] duration-300 ease-out`}
               >
                  <img

@@ -27,8 +27,9 @@ export default function Projects() {
 			</h2>
 
 			<div className="mt-6 grid gap-4 md:grid-cols-2">
-				{/* Card 1: Vibe Coding Adventures */}
-				<Card className="transition hover:shadow-md gap-2">
+								{/* Card 1: Vibe Coding Adventures */}
+								<Card className="relative transition hover:shadow-md gap-2 bg-gradient-to-br from-indigo-50/60 via-white/80 to-pink-50/40">
+									<span className="absolute left-0 top-3 bottom-3 w-3 rounded-r-full bg-gradient-to-b from-violet-300 to-violet-200" aria-hidden />
 					<CardHeader className="pb-0">
 						<div className="flex items-center justify-center gap-2 text-center">
 							<Bot className="h-5 w-5 text-gray-900" aria-hidden />
@@ -77,8 +78,9 @@ export default function Projects() {
 					</CardContent>
 				</Card>
 
-				{/* Card 2: Weekend Warrior Mode */}
-				<Card className="transition hover:shadow-md gap-2">
+								{/* Card 2: Weekend Warrior Mode */}
+								<Card className="relative transition hover:shadow-md gap-2 bg-gradient-to-br from-indigo-50/60 via-white/80 to-pink-50/40">
+									<span className="absolute left-0 top-3 bottom-3 w-3 rounded-r-full bg-gradient-to-b from-violet-300 to-violet-200" aria-hidden />
 					<CardHeader className="pb-0">
 								<div className="flex items-center justify-center gap-2 text-center">
 									<Trophy className="h-5 w-5 text-gray-900" aria-hidden />
@@ -152,8 +154,9 @@ export default function Projects() {
 					</CardContent>
 				</Card>
 
-				{/* Card 3: Reading Escapes */}
-				<Card className="transition hover:shadow-md md:col-span-2 gap-2">
+								{/* Card 3: Reading Escapes */}
+								<Card className="relative transition hover:shadow-md md:col-span-2 gap-2 bg-gradient-to-br from-indigo-50/60 via-white/80 to-pink-50/40">
+									<span className="absolute left-0 top-3 bottom-3 w-3 rounded-r-full bg-gradient-to-b from-violet-300 to-violet-200" aria-hidden />
 					<CardHeader className="pb-0">
 						<div className="flex items-center justify-center gap-2 text-center">
 							<Book className="h-5 w-5 text-gray-900" aria-hidden />
@@ -196,10 +199,10 @@ export default function Projects() {
 										Project Hail Mary · Valour (The Faithful and the Fallen #2) · Trunk Music (Harry Bosch
 										#5)
 									</p>
-									<div className="mt-3">
+									<div className="mt-3 flex justify-center">
 										<Link
 											href="/reading"
-											className="inline-flex items-center gap-2 rounded-md bg-gradient-to-r from-indigo-500 to-pink-500 px-4 py-2 text-sm font-medium text-white shadow-sm hover:opacity-95 transition-opacity"
+											className="inline-flex items-center justify-center rounded-md bg-black px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-gray-900 transition-colors"
 											aria-label="View full reading list"
 										>
 											View full reading list

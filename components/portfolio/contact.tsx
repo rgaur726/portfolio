@@ -10,9 +10,10 @@ export default function Contact() {
         Contact
       </h2>
 
-  <section className="rounded-xl bg-white/70 shadow-sm px-6 py-8 max-w-lg mx-auto">
+      <section className="relative rounded-xl bg-gradient-to-br from-indigo-50/60 via-white/80 to-pink-50/40 shadow-sm px-6 py-8 max-w-lg mx-auto overflow-hidden">
+        <span className="absolute left-0 top-3 bottom-3 w-3 rounded-r-full bg-gradient-to-b from-violet-300 to-violet-200" aria-hidden />
         {/* Main content area: email + book time */}
-        <div className="space-y-6">
+        <div className="space-y-6 pl-6">
           {/* Email */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6">
             <div className="flex items-center gap-2 min-w-[120px] text-gray-800 text-sm md:text-base font-semibold font-sans">

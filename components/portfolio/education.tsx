@@ -9,9 +9,10 @@ export default function Education() {
         <Award className="h-6 w-6 text-gray-800" aria-hidden />
         Education & Certifications
       </h2>
-      <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-        <Card className="h-full bg-[linear-gradient(to_bottom_right,theme(colors.blue.50)/50,transparent)]">
-          <CardContent className="h-full flex items-center">
+        <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+        <Card className="relative h-full bg-gradient-to-br from-indigo-50/60 via-white/80 to-pink-50/40 border border-gray-200 overflow-hidden">
+          <span className="absolute left-0 top-3 bottom-3 w-3 rounded-r-full bg-gradient-to-b from-violet-300 to-violet-200" aria-hidden />
+          <CardContent className="h-full flex items-center pl-6">
             <div className="flex items-center gap-3">
               <Image src="/bits.png" alt="Birla Institute of Technology and Science (BITS) Pilani" width={48} height={48} className="h-12 w-12 object-contain" />
               <div>
@@ -22,8 +23,9 @@ export default function Education() {
           </CardContent>
         </Card>
 
-        <Card className="h-full bg-[linear-gradient(to_bottom_right,theme(colors.violet.50)/50,transparent)]">
-          <CardContent className="h-full flex items-center">
+        <Card className="relative h-full bg-gradient-to-br from-indigo-50/60 via-white/80 to-pink-50/40 border border-gray-200 overflow-hidden">
+          <span className="absolute left-0 top-3 bottom-3 w-3 rounded-r-full bg-gradient-to-b from-violet-300 to-violet-200" aria-hidden />
+          <CardContent className="h-full flex items-center pl-6">
             <div className="flex items-center gap-3">
               <Image src="/ms.jpg" alt="Microsoft" width={48} height={48} className="h-12 w-12 object-contain rounded-sm" />
               <div>
