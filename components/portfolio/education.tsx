@@ -15,8 +15,8 @@ export default function Education() {
             <div className="flex items-center gap-3">
               <Image src="/bits.png" alt="Birla Institute of Technology and Science (BITS) Pilani" width={48} height={48} className="h-12 w-12 object-contain" />
               <div>
-                <div className="text-lg font-semibold text-gray-900">Birla Institute of Technology and Science (BITS) Pilani</div>
-                <div className="text-sm md:text-base text-gray-600">M.Sc. (Hons) and B.E. (Hons.)</div>
+                <div className="text-sm md:text-base font-semibold text-gray-900">Birla Institute of Technology and Science (BITS) Pilani</div>
+                <div className="text-sm md:text-base font-normal text-gray-600">M.Sc. (Hons) and B.E. (Hons.)</div>
               </div>
             </div>
           </CardContent>
@@ -27,7 +27,7 @@ export default function Education() {
             <div className="flex items-center gap-3">
               <Image src="/ms.jpg" alt="Microsoft" width={48} height={48} className="h-12 w-12 object-contain rounded-sm" />
               <div>
-                <div className="text-lg font-semibold text-gray-900">11× Microsoft Certified</div>
+                <div className="text-sm md:text-base font-semibold text-gray-900">11× Microsoft Certified</div>
                 <div className="text-sm md:text-base font-normal text-gray-700">across Azure, M365, Dynamics 365, including Azure Solutions Architect Expert & DevOps Engineer Expert</div>
               </div>
             </div>

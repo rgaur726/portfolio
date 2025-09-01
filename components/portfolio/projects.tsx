@@ -1,5 +1,6 @@
 import { Wrench, Figma, Github, Database, Bot, Sparkles, Trophy, Book } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 const MUST_READS = [
@@ -36,23 +37,23 @@ export default function Projects() {
 					</CardHeader>
 					<CardContent className="text-sm md:text-base text-muted-foreground space-y-3 pt-0">
 						<p>
-							When I'm not optimizing user funnels, I'm building things just because I can. Case in point —
-							this entire portfolio exists because I described what I wanted to an AI and tweaked some prompts.
+							When I'm not optimizing user funnels, I'm building stuff that probably doesn't need to exist but
+							definitely should. <span className="font-semibold">This portfolio?</span> Told v0 what I wanted, refined the prompts, and had a website over a weekend.
 						</p>
 						<p>
-							In fact, I've pushed more code to GitHub in the past 2 months than the past 4 years.
+							<span className="font-semibold">Plot twist:</span> I've committed more code to GitHub in 2 months than the previous 4 years combined, thanks to AI doing the boring parts while I focus on the interesting problems.
 						</p>
 						<p>
-							Built a cricket auction app for my local club because tracking player budgets on WhatsApp was
-							absolute chaos.
+							Built my cricket club an auction app because group chat budget tracking was giving everyone anxiety. Sometimes the best products solve the smallest, most annoying problems.
 						</p>
 						<p>
-							Currently working on something bigger for the PM community — More details coming soon.
+							<span className="font-semibold">Next up:</span> something for the PM community that'll make our lives slightly less chaotic. Can't reveal everything yet, but it involves fewer browser bookmarks.
 						</p>
 						<p>
-							<span className="font-medium text-foreground">My Build Process:</span> Mock it up in Figma, get
-							the frontend designed on v0 by Vercel, spin up Supabase for backend magic, then vibe code the
-							connections with Claude Code and GitHub Copilot. Ship fast, iterate faster.
+							<span className="font-semibold">My Flow:</span> Figma for mockups → v0 for frontend → Supabase for data → Claude Code + Copilot for the glue.
+						</p>
+						<p>
+							Andrej Karpathy was right - modern development does feels like cheating.
 						</p>
 
 						<div className="pt-1 flex flex-nowrap items-center gap-2 overflow-x-auto">
@@ -79,31 +80,31 @@ export default function Projects() {
 				{/* Card 2: Weekend Warrior Mode */}
 				<Card className="transition hover:shadow-md gap-2">
 					<CardHeader className="pb-0">
-						<div className="flex items-center justify-center gap-2 text-center">
-							<Trophy className="h-5 w-5 text-gray-900" aria-hidden />
-							<CardTitle className="text-lg">Weekend Warrior Mode</CardTitle>
-						</div>
+								<div className="flex items-center justify-center gap-2 text-center">
+									<Trophy className="h-5 w-5 text-gray-900" aria-hidden />
+									<CardTitle className="text-lg">Sports Obsession Station</CardTitle>
+								</div>
 					</CardHeader>
 					<CardContent className="text-sm md:text-base text-muted-foreground space-y-3 pt-0">
 						<p>
-							Sports are my productive procrastination — can't work on user stories when Madrid is playing or
-							Hamilton is fighting for points.
+							Sports are my sanctioned excuse to ignore Slack notifications — can't optimize conversion rates when
+							Madrid is chasing Champions League glory or Hamilton is hunting for pole position.
 						</p>
 						<p>
-							When I'm not building products, I'm either swinging a cricket bat badly or yelling at screens
-							showing various sports.
+							Cricket all-rounder at the local club, which translates to "bats wherever they need runs, bowls when
+							the main bowlers are tired, field wherever chaos needs managing". It's honest work and someone has to do it.
 						</p>
 						<p>
-							All-rounder for local cricket club — which means I bat at 5, bowl my quota of overs, and field
-							wherever the captain forgot to place someone; but it gets me on the team sheet.
+							Real Madrid since 2014 (yes, Ramos' 92.48 did convert a few into fanboys) - golden period, no shame!
+							Tennis loyalty shifted from Nadal's clay court magic to Sinner's baseline brilliance — Sinner is making me
+							believe in post-Big 3 era.
 						</p>
 						<p>
-							Madrid fan since 2014 because nothing says "good timing" like supporting them during their
-							best decade. Nadal made me love tennis, but Sinner is making me believe in post-Big 3 era.
+							F1 Sundays are sacred. Hamilton fan through championships, through Mercedes struggles, through whatever
+							comes next. Some loyalties transcend performance metrics.
 						</p>
 						<p>
-							F1 is my weekend religion — riding the Hamilton rollercoster through the championship years,
-							the wilderness years, and hopefully the comeback years.
+							Sports fandom is beautifully irrational — investing emotional energy in things you can't control while avoiding data you can.
 						</p>
 
 						<div className="pt-1 flex flex-nowrap items-center gap-2 overflow-x-auto">
@@ -195,12 +196,21 @@ export default function Projects() {
 										Project Hail Mary · Valour (The Faithful and the Fallen #2) · Trunk Music (Harry Bosch
 										#5)
 									</p>
+									<div className="mt-3">
+										<Link
+											href="/reading"
+											className="inline-flex items-center gap-2 rounded-md bg-gradient-to-r from-indigo-500 to-pink-500 px-4 py-2 text-sm font-medium text-white shadow-sm hover:opacity-95 transition-opacity"
+											aria-label="View full reading list"
+										>
+											View full reading list
+										</Link>
+									</div>
 								</div>
 							</div>
 
 							<div className="md:col-span-3 mt-3 md:mt-0">
 								<div className="flex flex-col gap-4">
-									<div className="rounded-xl border border-gray-200 bg-white/70 p-4 shadow-sm">
+									<div className="rounded-xl border border-gray-200 bg-gradient-to-br from-indigo-50/70 via-white/50 to-pink-50/60 p-4 shadow-sm">
 										<h3 className="text-sm font-medium text-foreground text-center mb-3">
 											Shelf-Tested Six — Must-Reads
 										</h3>
@@ -232,7 +242,7 @@ export default function Projects() {
 										</div>
 									</div>
 
-									<div className="rounded-xl border border-gray-200 bg-white/70 p-4 shadow-sm">
+									<div className="rounded-xl border border-gray-200 bg-gradient-to-br from-indigo-50/70 via-white/50 to-pink-50/60 p-4 shadow-sm">
 										<h3 className="text-sm font-medium text-foreground text-center mb-3">
 											On My Nightstand Right Now
 										</h3>

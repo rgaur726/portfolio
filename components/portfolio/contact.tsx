@@ -10,18 +10,18 @@ export default function Contact() {
         Contact
       </h2>
 
-      <section className="rounded-xl bg-white/70 shadow-sm px-6 py-8 max-w-xl mx-auto">
+  <section className="rounded-xl bg-white/70 shadow-sm px-6 py-8 max-w-lg mx-auto">
         {/* Main content area: email + book time */}
         <div className="space-y-6">
           {/* Email */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6">
-            <div className="flex items-center gap-2 min-w-[120px] text-gray-600 text-base md:text-lg font-medium">
+            <div className="flex items-center gap-2 min-w-[120px] text-gray-800 text-sm md:text-base font-semibold font-sans">
               <Mail className="h-5 w-5 text-gray-700" />
               <span>Email me</span>
             </div>
             <a
               href="mailto:rishabhgaur1226@gmail.com"
-              className="text-black text-base md:text-lg hover:underline mt-1 sm:mt-0"
+              className="text-gray-700 text-sm md:text-base font-normal hover:underline mt-1 sm:mt-0"
             >
               rishabhgaur1226@gmail.com
             </a>
@@ -29,7 +29,7 @@ export default function Contact() {
 
           {/* Book time */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6">
-            <div className="flex items-center gap-2 min-w-[120px] text-gray-600 text-base md:text-lg font-medium">
+            <div className="flex items-center gap-2 min-w-[120px] text-gray-800 text-sm md:text-base font-semibold font-sans">
               <Calendar className="h-5 w-5 text-gray-700" />
               <span>Book time:</span>
             </div>
@@ -37,7 +37,7 @@ export default function Contact() {
               href="https://cal.com/rishabhgaur/15min"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-black text-base md:text-lg hover:underline mt-1 sm:mt-0"
+              className="text-gray-700 text-sm md:text-base font-normal hover:underline mt-1 sm:mt-0"
             >
               15-min intro
             </a>
@@ -45,7 +45,7 @@ export default function Contact() {
         </div>
 
         {/* Socials moved to the bottom and center-aligned */}
-        <div className="mt-6 flex items-center justify-center gap-6">
+          <div className="mt-6 flex items-center justify-center gap-6">
           <a
             href="https://www.linkedin.com/in/gaurrishabh/"
             target="_blank"
@@ -53,7 +53,7 @@ export default function Contact() {
             className="flex items-center gap-2 hover:underline text-black"
           >
               <Image src="/li.png" alt="LinkedIn" width={22} height={22} className="inline-block" />
-            <span className="font-normal">LinkedIn</span>
+            <span className="text-sm md:text-base font-normal text-gray-700">LinkedIn</span>
           </a>
 
           <a
@@ -63,7 +63,7 @@ export default function Contact() {
             className="flex items-center gap-2 hover:underline text-black"
           >
             <Github className="h-5 w-5 text-gray-800" />
-            <span className="font-medium">GitHub</span>
+            <span className="text-sm md:text-base font-normal text-gray-700">GitHub</span>
           </a>
 
           <a
@@ -73,7 +73,7 @@ export default function Contact() {
             className="flex items-center gap-2 hover:underline text-black"
           >
             <Twitter className="h-5 w-5 text-gray-800" />
-            <span className="font-medium">X</span>
+            <span className="text-sm md:text-base font-normal text-gray-700">X</span>
           </a>
         </div>
       </section>

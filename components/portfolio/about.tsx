@@ -3,7 +3,7 @@ import { BookOpen } from "lucide-react"
 export default function About() {
   return (
   <section className="container mx-auto max-w-6xl px-4 font-sans">
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
+  <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-10 items-start">
         <div className="md:col-span-3">
           <h2 className="text-2xl md:text-3xl font-semibold text-balance flex items-center gap-2 mb-2">
             <BookOpen className="size-6 text-gray-700" />
@@ -11,13 +11,13 @@ export default function About() {
           </h2>
           <div className="mt-2 space-y-4 text-left">
             <p className="text-sm md:text-base text-gray-800 leading-relaxed">
-              I specialize in transforming complex technical challenges into scalable, user-centric product solutions that drive measurable business growth. Currently leading AI strategy at <span className="font-semibold text-gray-900">GoGuardian</span>, building next-gen assessment tools that reduce educator administrative tasks by 40%.
+              I transform complex technical challenges into products that people actually want to use, with a track record of driving measurable business growth across company stages. Currently leading AI strategy at <span className="font-semibold text-gray-900">GoGuardian</span>, building assessment tools that give teachers back 40% of their time.
             </p>
             <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-              My journey spans <span className="font-semibold text-gray-900">Microsoft</span> (Healthcare Cloud), <span className="font-semibold text-gray-900">Circles</span> (International Telco Platform), and now <span className="font-semibold text-gray-900">GoGuardian</span> (EdTech). I've learned that the best products emerge from deep user empathy, not just technical possibilities.
+              From Big Tech (<span className="font-semibold text-gray-900">Microsoft</span>) to international startups (<span className="font-semibold text-gray-900">Circles</span>) to growth-stage EdTech (<span className="font-semibold text-gray-900">GoGuardian</span>) - I've learned that great products start with understanding what makes users' days harder, then building technology that makes those days easier.
             </p>
             <p className="text-sm md:text-base text-gray-700">
-              <span className="font-semibold">What drives me:</span> Using technology to solve workflow problems that actually matter to people's daily lives.
+              <span className="font-semibold">What drives me:</span> Turning "this is annoying" into "this just works" for millions of people.
             </p>
           </div>
         </div>
